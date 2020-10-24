@@ -17,6 +17,12 @@ typedef struct op
 
 /* PROTOTYPES */
 
+int _putchar(char c);
+
 int _printf(const char *format, ...);
+
+int op_str(va_list ls);
+
+int op_char(va_list ls);
 
 #endif /* _HOLBERTON_H_ */
