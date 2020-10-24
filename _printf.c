@@ -13,9 +13,10 @@ int _printf(const char *format, ...)
 	unsigned int len = 0;
 	unsigned int itr;
 	va_list ls;
-	int (*f)(va_list ls);
+	int (*f)(va_list);
 
 	va_start(ls, format);
+
 	/** We are checking to see if format is NULL as well as if fomat of itr
 	 *  is equalto the null terminating byte */
 	for (itr = 0; format != NULL && format[itr] != '\0'; itr++)
@@ -30,10 +31,16 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				len++;
 		}
-		else
+		if(format[itr] == '%' && *(format + 1) != '%')
 		{
-			f = func_select(va_list ls);
+			itr++;
+			f = func_select(format[itr]);
+
+			if (f == NULL)
+			{
+				printf("error");
+			}
 		}
 	}
-
+	return (len);
 }

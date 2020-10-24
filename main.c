@@ -11,12 +11,10 @@ int main(void)
 {
 	int len;
 	int len2;
-	unsigned int ui;
-	void *addr;
 
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
-	addr = (void *)0x7ffe637541f0;
+	_printf("lentgth:[%c]\n", 'g');
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
 	_printf("Character:[%c]\n", 'H');

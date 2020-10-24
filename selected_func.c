@@ -12,18 +12,19 @@
 int op_str(va_list ls)
 {
 	char *ptr = va_arg(ls, char *);
-	int itr = 0;
+	int itr;
 
 	if (!ptr)
 	{
 		exit(100);
-		return (NULL);
+		return (0);
 	}
 
-	for (itr; ptr[itr] != NULL; itr++)
+	for (itr = 0; ptr[itr] != '\0'; itr++)
 	{
 		_putchar(ptr[itr]);
 	}
+	return (1);
 }
 
 /**
@@ -37,11 +38,13 @@ int op_char(va_list ls)
 {
 	char *ptr = va_arg(ls, char *);
 
+	printf("we made it!");
 	if (!ptr)
 	{
 		exit(101);
-		return (NULL);
+		return (0);
 	}
 
-	_putchar(ptr);
+	_putchar(*ptr);
+	return (1);
 }
