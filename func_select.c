@@ -19,6 +19,7 @@ int (*func_select(char spec))(va_list)
 		{'i', op_num},
 		{'\0', NULL}
 	};
+
 	while (ops[idx].ptr)
 	{
 		if (ops[idx].ptr == spec)
@@ -28,6 +29,5 @@ int (*func_select(char spec))(va_list)
 		idx++;
 	}
 
-	exit(98);
 	return (NULL);
 }

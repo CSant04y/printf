@@ -36,16 +36,15 @@ int op_str(va_list ls)
 
 int op_char(va_list ls)
 {
-	char *ptr = va_arg(ls, char *);
+	char p = va_arg(ls, int);
 
-	printf("we made it!");
-	if (!ptr)
+	if (!p)
 	{
 		exit(101);
 		return (0);
 	}
 
-	_putchar(*ptr);
+	_putchar(p);
 	return (1);
 }
 /**
@@ -75,7 +74,6 @@ int r_len(int n)
 {
 	int i, len;
 
-	printf("%d\n", n);
 	if (n == 0)
 		return (0);
 	i = n % 10;
