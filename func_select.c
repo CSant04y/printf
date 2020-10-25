@@ -18,7 +18,6 @@ int (*func_select(char spec))(va_list)
 		{'\0', NULL}
 	};
 
-	printf("spec: %c\n", spec);
 	while (ops[idx].ptr)
 	{
 		if (ops[idx].ptr == spec)

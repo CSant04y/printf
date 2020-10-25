@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 
 	va_start(ls, format);
 
-	/** We are checking to see if format is NULL as well as if fomat of itr
+	/** We are checking tmt + 1) see if format is NULL as well as if fomat of itr
 	 *  is equalto the null terminating byte */
 	for (itr = 0; format != NULL && format[itr] != '\0'; itr++)
 	{
@@ -26,12 +26,12 @@ int _printf(const char *format, ...)
 			_putchar(format[itr]);
 			len++;
 		}
-		if (format[itr] == '%' && *(format + 1) == '%')
+		if (format[itr] == '%' && format[itr + 1] == '%')
 		{
 				_putchar('%');
 				len++;
 		}
-		if(format[itr] == '%' && *(format + 1) != '%')
+		if(format[itr] == '%' && format[itr + 1] != '%')
 		{
 			itr++;
 			f = func_select(format[itr]);
