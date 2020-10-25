@@ -15,9 +15,10 @@ int (*func_select(char spec))(va_list)
 	op_t ops[] = {
 		{'c', op_char},
 		{'s', op_str},
+		{'d', op_num},
+		{'i', op_num},
 		{'\0', NULL}
 	};
-
 	while (ops[idx].ptr)
 	{
 		if (ops[idx].ptr == spec)
