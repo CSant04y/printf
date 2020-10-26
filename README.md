@@ -25,13 +25,13 @@ A struct and function pointers are used to pair the passed char with the
 appropraite function.
 
 `
-	op_t ops[] = {
-		{'c', op_char},
-		{'s', op_str},
-		{'d', op_num},
-		{'i', op_num},
-		{'\0', NULL}
-	};
+op\_t ops[] = {
+	{'c', op\_char},
+	{'s', op\_str},
+	{'d', op\_num},
+	{'i', op\_num},
+	{'\0', NULL}
+};
 `
 
 ## *selected_func.c*
