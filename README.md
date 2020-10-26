@@ -6,7 +6,7 @@ them into printf to be printed to stdout.
 
 ## *_printf.c*
 
-\_printf.c contains the "main" \_printf function. It is a variadic 
+\_printf.c contains the "main" \_printf function. It is a variadic
 function that takes in a list of arguments from the standard input.
 Once the function receives the call, \_printf begins to put characters
 from the input to the standard out until it reaches a format specifier,
