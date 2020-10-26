@@ -65,7 +65,7 @@ int op_num(va_list ls)
 		num = -num;
 	}
 	if (num / 10)
-		count = r_len(num);
+		count += r_len(num);
 	if (bull == 1)
 		_putchar('8');
 	if (neg == 0)
