@@ -13,14 +13,13 @@ int op_str(va_list ls)
 	char *ptr = va_arg(ls, char *);
 	int itr;
 
-	if (!ptr)
-		return (-1);
-
+	if (ptr == NULL)
+		ptr = "(null)";
 	for (itr = 0; ptr[itr] != '\0'; itr++)
 	{
 		_putchar(ptr[itr]);
 	}
-	return (1);
+	return (itr);
 }
 
 /**
@@ -49,18 +48,31 @@ int op_num(va_list ls)
 {
 	int count = 0;
 	int num = va_arg(ls, int);
+	int bull = 0;
+	int neg = 0;
 
 	if (num == 0)
 		_putchar('0');
+	if (num == -2147483648)
+	{
+		bull = 1;
+		num = num / 10;
+	}
 	if (num < 0)
 	{
+		neg = 1;
 		_putchar('-');
-		num *= -1;
+		num = -num;
 	}
 	if (num / 10)
-		r_len(num);
-	count = r_len(num);
-	return (count + 1);
+		count += r_len(num);
+	if (bull == 1)
+		_putchar('8');
+	if (neg == 0)
+		return (count);
+	if (neg == 1)
+		return (count + 1);
+	return (-1);
 }
 /**
  * r_len - this gets the lenght of a sting using recursion
