@@ -7,7 +7,13 @@
 #include <stdio.h>
 #include <stdarg.h>
 
-/* STRUCT */
+/**
+ * struct op - struct contains function pointer that hold pointer to function
+ * @ptr: This holds a char
+ * @func_ptr: this function pointer holds a pointer to a selectd function
+ * Description: Creates stuct of op_t with parameters of char ptr
+ * function pointer.
+ */
 
 typedef struct op
 {

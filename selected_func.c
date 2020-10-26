@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * op_str - prints strings
  *
@@ -29,7 +28,7 @@ int op_str(va_list ls)
 
 /**
  * op_char - prints characters
- * ls: name of va_list
+ * @ls: name of va_list
  * Return: int of printed lenght
  * OR NULL if ptr is NULL, exit 101
  */
@@ -68,7 +67,7 @@ int op_num(va_list ls)
 /**
  * r_len - this gets the lenght of a sting using recursion
  * @n: passing in integer
- *
+ * Return: is len
  */
 int r_len(int n)
 {

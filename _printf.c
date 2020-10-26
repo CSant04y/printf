@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 	int (*f)(va_list);
 
 	va_start(ls, format);
-	
+
 	for (itr = 0; format != NULL && format[itr] != '\0'; itr++)
 	{
 		if (format[itr] != '%')
@@ -24,19 +24,20 @@ int _printf(const char *format, ...)
 			_putchar(format[itr]);
 			len++;
 		}
-		if (format[itr] == '%' && format[itr + 1] == '%')
-		{
-			_putchar('%');
-			len++;
-		}
 		if (format[itr] == '%' && format[itr + 1] != '%')
 		{
 			f = func_select(format[itr + 1]);
-			if(!f)
+			if (!f)
 				printf("Error");
 			else
 				len += f(ls);
 			++itr;
+		}
+		if (format[itr] == '%' && format[itr + 1] == '%')
+		{
+			_putchar('%');
+			len++;
+			itr++;
 		}
 	}
 	va_end(ls);

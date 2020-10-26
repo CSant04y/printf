@@ -30,6 +30,8 @@ by a char that specifies the format that is specified.
     The return value of _printf is (len)
 
 .SH EXAMPLE
+#include <stdio.h>
+#incldue <stdarg.h>
 
     int main(void){
 

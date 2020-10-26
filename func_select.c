@@ -2,9 +2,7 @@
 
 /**
  * func_select - returns function pointer to selected function
- *
- * @ls: format list
- *
+ * @spec: char being passed in from _printf which contians format specifier
  * Return: function pointer
  * OR exit 98 and NULL if issue
  */
