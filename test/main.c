@@ -27,7 +27,7 @@ int main(void)
         len3 = _printf("[%d]\n", 500);
         len4 = printf("[%d]\n", 500);
 /*this is printing the lens from above*/
-        _printf("[(-_)1: %d, (-)2: %i, (+_)3: %d, (+)4: %d]\n",len, len2, len3, len4);
+	_printf("[(-_)1: %d, (-)2: %i, (+_)3: %d, (+)4: %d]\n",len, len2, len3, len4);
 	_printf("Character:[%c]\n", 'H');
 	printf("Character:[%c]\n", 'H');
 	_printf("String:[%s]\n", "I am a string !");
@@ -42,7 +42,7 @@ int main(void)
 	len = _printf("[%d]\n", -123454);
 	len2 = printf("[%d]\n", -123454);
 /*testing spaces between format modifiers*/
-	printf("[%     d, %d]\n", len, len2);
+	_printf("[%     d, %d]\n", len, len2);
 	printf("[% s]\n", "bob");
 	_printf("[%s]\n", NULL);
 	_printf("[%s]\n", "");
