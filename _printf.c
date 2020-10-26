@@ -26,6 +26,8 @@ int _printf(const char *format, ...)
 		}
 		if (format[itr] == '%' && format[itr + 1] != '%')
 		{
+			while (format[itr + 1] == ' ')
+				itr++;
 			f = func_select(format[itr + 1]);
 			if (!f)
 				printf("Error");
