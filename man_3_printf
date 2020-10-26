@@ -1,0 +1,57 @@
+.TH man_3_printf 3 "25 October 2020" "Version 1.0"
+
+.SH NAME
+
+    _printf \- _printf takes in arguments data and formats it upon the specifier
+
+.SH SYNOPSIS
+
+    _printf(format[argument])
+
+.SH DESCRIPTION
+
+The _printf is a function that does a set of tasks within its parentheses
+that enable an intresting set of operations. Within the format section of the
+printf you have a string of chars that that are copied to the standard output.
+These strings of chars can be noraml chars or special chars that have special
+purposes. Another is format specifiers. These are signaled with '%' folowed
+by a char that specifies the format that is specified.
+
+.B Format specifiers
+
+ [%c] \- this is specifies a character
+ [%d] \- this specifies an decimal integer
+ [%s] \- this specifies a char string
+ [%i] \- this specifies a signed integer
+ [%%] \- this specifies to print out a percent sign
+
+.SH RETURN VALUE
+
+    The return value of _printf is (len)
+
+.SH EXAMPLE
+
+    int main(void){
+
+char *ptr = "Hello, Holberton";
+
+_printf("This is the string im printing out: %s", ptr);
+
+return (0);
+
+}
+
+.SH SYNOPSIS
+
+	_printf format [argument]...
+
+.SH DESCRIPTION
+
+	Format - the format is comprised os a string of chars
+some chars have special meaning as well as a set of instructions
+written out so that you can preform special tasks
+[argument] - is comprised of '%' sign that give a character a directive.
+The directive tell the said char
+.SH AUTHOR
+    Ayden Townsley Github: (aydentownsley)
+    Carlos Esquivel Github: (CSant04y)
