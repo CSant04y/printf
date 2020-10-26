@@ -55,13 +55,16 @@ int op_num(va_list ls)
 {
 	int num = va_arg(ls, int);
 
-		if (num < 0)
-		{
-			_putchar('-');
-			num *= -1;
-		}
-		else if (num / 10)
-			r_len(num);
+	if (num == 0)
+		_putchar('0');
+	if (num < 0)
+	{
+		_putchar('-');
+		num *= -1;
+	}
+	if (num / 10)
+		r_len(num);
+
 	return (num);
 }
 /**
