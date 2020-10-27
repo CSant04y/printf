@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 			}
 			f = func_select(format[itr + 1]);
 			if (!f)
-				printf("Error");
+				_putchar('E');
 			else
 			{
 				rlen = f(ls);
