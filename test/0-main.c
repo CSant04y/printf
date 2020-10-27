@@ -54,5 +54,7 @@ int main(void)
 	_printf("css%ccs%scscscs\n", 'T', "Test");
 	printf("css%ccs%scscscs\n", 'T', "Test");
 
+	len1 = _printf("int to Binary [%b]\n", 2147483647);
+	_printf("len of binary = %d", len1);
 	return (0);
 }
