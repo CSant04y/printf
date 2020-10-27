@@ -45,15 +45,7 @@ int _printf(const char *format, ...)
 			}
 			++itr;
 		}
-/*		if (format[itr] == '%' && format[itr + 1] == '%')
-		{
-			while (format[itr + 1] == ' ')
-				itr++;
-			_putchar('%');
-			len++;
-			itr++;
-		}
-*/	}
+	}
 	va_end(ls);
 	return (len);
 }

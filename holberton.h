@@ -38,4 +38,8 @@ int op_num(va_list ls);
 int r_len(int n);
 
 int op_num(va_list ls);
+
+int itob(va_list ls);
+
+int ihelp(int n);
 #endif /* _HOLBERTON_H_ */

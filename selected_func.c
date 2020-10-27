@@ -33,6 +33,7 @@ int op_char(va_list ls)
 {
 	int len = 1;
 	char p = va_arg(ls, int);
+
 	if (!p)
 		return (-1);
 
