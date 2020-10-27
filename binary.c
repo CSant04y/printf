@@ -7,7 +7,7 @@
 int itob(va_list ls)
 {
 	int len = 0;
-	int num = va_arg(ls, int);
+	unsigned int num = va_arg(ls, unsigned int);
 
 	if (num == 0)
 	{
@@ -23,7 +23,7 @@ int itob(va_list ls)
  * @n: number being passed in from itob
  * Return: is len
  */
-int ihelp(int n)
+int ihelp(unsigned int n)
 {
 	int len1 = 1;
 

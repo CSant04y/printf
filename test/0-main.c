@@ -54,7 +54,12 @@ int main(void)
 	_printf("css%ccs%scscscs\n", 'T', "Test");
 	printf("css%ccs%scscscs\n", 'T', "Test");
 
-	len1 = _printf("int to Binary [%b]\n", 5);
+	_printf("\nTesting %%b\n");
+	len1 = _printf("int to Binary [%b]\n", 4294967295);
 	_printf("len of binary = %d\n", len1);
+
+	_printf("\nTesting %%r\n");
+	len1 = _printf("Reversed string: [%r]\n", "Hello!");
+	_printf("Strlen: [%d]\n", len1);
 	return (0);
 }

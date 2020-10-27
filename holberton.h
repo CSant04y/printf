@@ -41,5 +41,8 @@ int op_num(va_list ls);
 
 int itob(va_list ls);
 
-int ihelp(int n);
+int ihelp(unsigned int n);
+
+int revstr(va_list ls);
+
 #endif /* _HOLBERTON_H_ */
