@@ -31,13 +31,14 @@ int op_str(va_list ls)
 
 int op_char(va_list ls)
 {
+	int len = 1;
 	char p = va_arg(ls, int);
-
+	printf("WE MADE IT!!!!!!");
 	if (!p)
 		return (-1);
 
 	_putchar(p);
-	return (1);
+	return (len);
 }
 /**
  * op_num - This prints a integer and decimal integer to the standard output

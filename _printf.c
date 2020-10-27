@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int len = 0;
+	unsigned int len = 0, rlen = 0;
 	unsigned int itr;
 	va_list ls;
 	int (*f)(va_list);
@@ -24,24 +24,36 @@ int _printf(const char *format, ...)
 			_putchar(format[itr]);
 			len++;
 		}
-		if (format[itr] == '%' && format[itr + 1] != '%')
+		if (format[itr] == '%')
 		{
 			while (format[itr + 1] == ' ')
 				itr++;
+			if (format[itr + 1] == '%')
+			{
+				_putchar('%');
+				len++;
+				itr++;
+				continue;
+			}
 			f = func_select(format[itr + 1]);
 			if (!f)
 				printf("Error");
 			else
-				len += f(ls);
+			{
+				rlen = f(ls);
+				len = len + rlen;
+			}
 			++itr;
 		}
-		if (format[itr] == '%' && format[itr + 1] == '%')
+/*		if (format[itr] == '%' && format[itr + 1] == '%')
 		{
+			while (format[itr + 1] == ' ')
+				itr++;
 			_putchar('%');
 			len++;
 			itr++;
 		}
-	}
+*/	}
 	va_end(ls);
 	return (len);
 }
