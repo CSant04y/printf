@@ -10,9 +10,12 @@ int itob(va_list ls)
 	int num = va_arg(ls, int);
 
 	if (num == 0)
+	{
+		_putchar('0');
 		return (1);
+	}
 	len += ihelp(num);
-	return (len + 1);
+	return (len);
 }
 /**
  * ihelp - recursive function that returns the length of the binary
@@ -22,7 +25,7 @@ int itob(va_list ls)
  */
 int ihelp(int n)
 {
-	int len1;
+	int len1 = 1;
 
 	if (!n)
 		return (-1);
