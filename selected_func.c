@@ -33,7 +33,6 @@ int op_char(va_list ls)
 {
 	int len = 1;
 	char p = va_arg(ls, int);
-	printf("WE MADE IT!!!!!!");
 	if (!p)
 		return (-1);
 
@@ -52,8 +51,8 @@ int op_num(va_list ls)
 	int bull = 0;
 	int neg = 0;
 
-	if (num == 0)
-		_putchar('0');
+	if (num >= 0 && num <= 9)
+		_putchar(num + '0');
 	if (num == -2147483648)
 	{
 		bull = 1;
