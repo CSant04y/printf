@@ -56,23 +56,14 @@ int main(void)
 
 	len1 = _printf("int to Binary [%b]\n", 0);
 	_printf("len of binary = %d\n", len1);
-<<<<<<< HEAD
-=======
 
 	_printf("\nTesting %%r\n");
 	len1 = _printf("Reversed string: [%r]\n", "hello!");
 	_printf("Strlen: [%d]\n", len1);
 
 	len1 = _printf("Rot13 translate = [%R]\n", "Uryyb zl anzr vf Pneybf");
-<<<<<<< HEAD
 	_printf("print length: [%d]\n", len1);
->>>>>>> 45164750835ff7b89ce883c9255bf492c9b794c3
-<<<<<<< HEAD
-=======
 	len2 = printf("Rot13 translate = [%s]\n", "Uryyb zl anzr vf Pneybf");
 	_printf("print length: [%d, %d]\n", len1, len2);
->>>>>>> 4f5ab3d2902ac19080dee4ced30424ce4b3aa8f9
-=======
->>>>>>> 582a5c19a2b82e510d2b7c4a2ef3b143e261b302
 	return (0);
 }

@@ -34,8 +34,8 @@ int rot13(va_list ls)
 				_putchar(a[n]);
 				break;
 			}
-			if ((s[i] < 65 || s[i] > 90) && (s[i] < 97 || s[i] > 12
-			2))
+			if ((s[i] < 'A' || s[i] > 'Z') && (s[i] < 'a' || s[i] >
+			 'z'))
 			{
 				_putchar(s[i]);
 				break;
