@@ -40,6 +40,21 @@ selected\_func.c contains multiple functions that the function pointer
 from func\_select.c can return. These functions each take a different
 variable type and put them to the stdout in place of the specifier.
 
+## *revstr.c*
+This function takes in a string that that is given by _print.c and iterates
+through the sting. It then finds the end of the string and traverses backwards
+and prints each char while doing so.
+
+## *rot13.c*
+This takes in an encrypted or a string that need to be decrypted and either
+encrypts it or decrypts it in rot13 format using a nested loop system.
+
+## *binary.c*
+This function takes in va_list and takes in an integer and makes that integer
+into a binary number using divison and the modulus function which is done
+recursivley to get an accurate length.
+
+
 ## *holberton.h*
 
 This is the header file that containes the libraries, function prototypes,
