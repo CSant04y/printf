@@ -18,7 +18,7 @@ int rot13(va_list ls)
 
 	if (s == NULL)
 		return (-1);
-	
+
 	for (; s[count] != '\0'; count++)
 		;
 
@@ -32,10 +32,10 @@ int rot13(va_list ls)
 			{
 				t[i] = a[n];
 				_putchar(a[n]);
-				++count;
 				break;
 			}
-			else
+			if ((s[i] < 65 || s[i] > 90) && (s[i] < 97 || s[i] > 12
+			2))
 			{
 				_putchar(s[i]);
 				break;

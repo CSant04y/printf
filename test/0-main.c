@@ -63,6 +63,7 @@ int main(void)
 	_printf("Strlen: [%d]\n", len1);
 
 	len1 = _printf("Rot13 translate = [%R]\n", "Uryyb zl anzr vf Pneybf");
-	_printf("print length: [%d]\n", len1);
+	len2 = printf("Rot13 translate = [%s]\n", "Uryyb zl anzr vf Pneybf");
+	_printf("print length: [%d, %d]\n", len1, len2);
 	return (0);
 }
