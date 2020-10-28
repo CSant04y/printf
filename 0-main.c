@@ -12,7 +12,6 @@ int main(void)
 
 	len1 = _printf("String:[%s]\n", "10 spooky skeletons");
 	len2 = printf("String:[%s]\n", "10 spooky skeletons");
-
 	/*printing the lengths of len1 and len2*/
 
 	_printf("_printf print len1 is:[%d, %i]\n", len1, len1);
@@ -59,7 +58,8 @@ int main(void)
 
 	_printf("\nTesting %%r\n");
 	len1 = _printf("Reversed string: [%r]\n", "hello!");
-	_printf("Strlen: [%d]\n", len1);
+	len2 = printf("Reversed string: [%s]\n", "hello!");
+	_printf("Length of len1:[%d] and len2:[%d]\n", len1, len2);
 
 	len1 = _printf("Rot13 translate = [%R]\n", "Uryyb zl anzr vf Pneybf");
 	_printf("print length: [%d]\n", len1);

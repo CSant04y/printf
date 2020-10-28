@@ -44,5 +44,5 @@ int rot13(va_list ls)
 	}
 	t[i + 1] = _putchar('\0');
 	free(t);
-	return (count);
+	return (count - 1);
 }
