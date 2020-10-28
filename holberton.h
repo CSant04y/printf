@@ -45,4 +45,6 @@ int ihelp(unsigned int n);
 
 int revstr(va_list ls);
 
+int rot13(va_list ls);
+
 #endif /* _HOLBERTON_H_ */

@@ -61,5 +61,8 @@ int main(void)
 	_printf("\nTesting %%r\n");
 	len1 = _printf("Reversed string: [%r]\n", NULL);
 	_printf("Strlen: [%d]\n", len1);
+
+	len1 = _printf("Rot13 translate = [%R]\n", "Uryyb zl anzr vf Pneybf");
+	_printf("print length: [%d]\n", len1);
 	return (0);
 }

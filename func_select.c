@@ -17,6 +17,7 @@ int (*func_select(char spec))(va_list)
 		{'i', op_num},
 		{'b', itob},
 		{'r', revstr},
+		{'R', rot13},
 		{'\0', NULL}
 	};
 
