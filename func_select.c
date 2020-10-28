@@ -29,5 +29,5 @@ int (*func_select(char spec))(va_list)
 		idx++;
 	}
 
-	return (-1);
+	return (NULL);
 }
