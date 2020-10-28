@@ -23,6 +23,12 @@ int revstr(va_list ls)
 
 	store = malloc((sizeof(char) * count) + 1);
 
+	if (!store)
+	{
+		free(store);
+		return (-1);
+	}
+
 	for (itr = count; itr >= 0; itr--, itr2++)
 	{
 		store[itr2] = s[itr];
