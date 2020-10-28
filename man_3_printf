@@ -1,4 +1,3 @@
-
 .TH man_3_printf 3 "25 October 2020" "Version 1.0"
 
 .SH NAME
@@ -25,36 +24,41 @@ by a char that specifies the format that is specified.
  [%s] \- this specifies a char string
  [%i] \- this specifies a signed integer
  [%%] \- this specifies to print out a percent sign
+ [%R] \- this specifies to print encrypted//decrypted string in rot13
+ [%r] \- this specifies to print a string in reverse
+ [%b] \- this specifies to print a given unsigned int into binary
 
 .SH RETURN VALUE
 
-    The return value of _printf is (len)
+    The return Value is -1 for failure and 1 for success
 
 .SH EXAMPLE
-#include <stdio.h>
-#incldue <stdarg.h>
+    #include <stdio.h>
 
-    int main(void){
+ 	 main - this function prints out a simple string
+      Return: is 0
 
-char *ptr = "Hello, Holberton";
+      int main(void){
 
-_printf("This is the string im printing out: %s", ptr);
+      char *ptr = "Hello, Holberton";
 
-return (0);
+      _printf("This is the string im printing out: %s", ptr);
+
+      return (0);
 
 }
 
 .SH SYNOPSIS
 
-	_printf format [argument]...
+	_printf format [arguments]...
 
 .SH DESCRIPTION
 
 	Format - the format is comprised os a string of chars
-some chars have special meaning as well as a set of instructions
-written out so that you can preform special tasks
-[argument] - is comprised of '%' sign that give a character a directive.
-The directive tell the said char
+	some chars have special meaning as well as a set of instructions
+	written out so that you can preform special tasks
+	[argument] - is comprised of '%' sign that will give a character a certain
+	directive.
 .SH AUTHOR
     Ayden Townsley Github: (aydentownsley)
     Carlos Esquivel Github: (CSant04y)
