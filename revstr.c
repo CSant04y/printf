@@ -40,10 +40,8 @@ int revstr(va_list ls)
 
 	store[itr2 + 1] = '\0';
 
-	s = store;
-
 	for (itr = 0; itr <= count; itr++)
-		_putchar(s[itr]);
+		_putchar(store[itr]);
 
 	free(store);
 	return (count);

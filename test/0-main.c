@@ -59,7 +59,7 @@ int main(void)
 	_printf("len of binary = %d\n", len1);
 
 	_printf("\nTesting %%r\n");
-	len1 = _printf("Reversed string: [%r]\n", NULL);
+	len1 = _printf("Reversed string: [%r]\n", "hello!");
 	_printf("Strlen: [%d]\n", len1);
 
 	len1 = _printf("Rot13 translate = [%R]\n", "Uryyb zl anzr vf Pneybf");
