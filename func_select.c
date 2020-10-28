@@ -20,7 +20,6 @@ int (*func_select(char spec))(va_list)
 		{'R', rot13},
 		{'\0', NULL}
 	};
-
 	while (ops[idx].ptr)
 	{
 		if (ops[idx].ptr == spec)

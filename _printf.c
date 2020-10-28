@@ -16,7 +16,8 @@ int _printf(const char *format, ...)
 	int (*f)(va_list);
 
 	va_start(ls, format);
-
+	if (format == NULL)
+		return (-1);
 	for (itr = 0; format != NULL && format[itr] != '\0'; itr++)
 	{
 		if (format[itr] != '%')
@@ -28,6 +29,8 @@ int _printf(const char *format, ...)
 		{
 			while (format[itr + 1] == ' ')
 				itr++;
+			if (format[itr + 1] == '\0')
+				return (-1);
 			if (format[itr + 1] == '%')
 			{
 				_putchar('%');
@@ -37,7 +40,11 @@ int _printf(const char *format, ...)
 			}
 			f = func_select(format[itr + 1]);
 			if (!f)
-				_putchar('E');
+			{
+				_putchar(format[itr]);
+				_putchar(format[itr + 1]);
+				len += 2;
+			}
 			else
 			{
 				rlen = f(ls);

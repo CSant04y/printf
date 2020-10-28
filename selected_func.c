@@ -23,7 +23,7 @@ int op_str(va_list ls)
 }
 
 /**
- * op_char - prints characters
+* op_char - prints characters
  * @ls: name of va_list
  * Return: int of printed lenght
  * OR NULL if ptr is NULL, exit 101
@@ -33,9 +33,6 @@ int op_char(va_list ls)
 {
 	int len = 1;
 	char p = va_arg(ls, int);
-
-	if (!p)
-		return (-1);
 
 	_putchar(p);
 	return (len);
