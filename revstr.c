@@ -11,7 +11,8 @@
 int revstr(va_list ls)
 {
 	char *s = va_arg(ls, char *);
-	int i = 0, count = 0;
+	int i = 0, count = 0, itr2 = 0, itr;
+	char *store;
 
 	if (!s)
 		return (-1);
@@ -20,10 +21,22 @@ int revstr(va_list ls)
 		count++;
 	}
 
-	for (; i >= 0; i--)
+	store = malloc((sizeof(char) * count) + 1);
+
+	for (itr = count; itr >= 0; itr--, itr2++)
 	{
-		_putchar(s[i]);
+		store[itr2] = s[itr];
 	}
 
+	store[itr2 + 1] = '\0';
+
+	s = store;
+
+	for (itr = 0; itr <= count; itr++)
+	{
+		_putchar(s[itr]);
+	}
+
+	free(store);
 	return (count);
 }
