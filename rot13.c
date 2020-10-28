@@ -24,6 +24,11 @@ int rot13(va_list ls)
 
 	t = malloc((sizeof(char *) * count) + 1);
 
+	if (t == NULL)
+	{
+		free(t);
+		return (-1);
+	}
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (n = 0; b[n] != '\0'; n++)
