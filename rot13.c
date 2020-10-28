@@ -18,7 +18,7 @@ int rot13(va_list ls)
 
 	if (s == NULL)
 		return (-1);
-	
+
 	for (; s[count] != '\0'; count++)
 		;
 
