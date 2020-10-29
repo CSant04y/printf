@@ -4,7 +4,11 @@ printf is a function prints a formated string to the standard out. There are
 specifiers that allow printf to take variables of varying types and pass
 them into printf to be printed to stdout.
 
-## *_printf.c*
+```
+int _printf(const char *format, ...);
+```
+The varadic prtotype above takes in a variable amount of arguments that range
+from strings to integers.
 
 \_printf.c contains the "main" \_printf function. It is a variadic
 function that takes in a list of arguments from the standard input.
@@ -24,15 +28,18 @@ from the \_printf function to decide what variable type is being passed.
 A struct and function pointers are used to pair the passed char with the
 appropraite function.
 
-`
-op\_t ops[] = {
-	{'c', op\_char},
-	{'s', op\_str},
-	{'d', op\_num},
-	{'i', op\_num},
+```
+op_t ops[] = {
+	{'c', op_char},
+	{'s', op_str},
+	{'d', op_num},
+	{'i', op_num},
+	{'b', itob},
+	{'r', revstr},
+	{'R', rot13},
 	{'\0', NULL}
 };
-`
+```
 
 ## *selected_func.c*
 
@@ -59,3 +66,23 @@ recursivley to get an accurate length.
 
 This is the header file that containes the libraries, function prototypes,
 and struct creations for \_printf.
+
+## *Examples*
+
+INPUT: 
+
+```
+int main(void)
+{
+	_printf("This is a %s of how _printf works%c\n", "example", '!');
+	_printf("This prints the number %d in binary: %b\n", 50, 50);
+	return (0);
+}
+```
+
+OUTPUT:
+
+```
+This is a example of how _printf works!
+This prints the number 50 in binary: 110010
+```
